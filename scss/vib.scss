@@ -93,12 +93,15 @@
 .footer-l {
   padding: 65px 40px 65px 40px;
   flex-grow: 2;
+  background-color: base.$vib-blue;
+  color: white;
 }
 
 .footer-r {
   padding: 65px 50px 65px 50px;
   font-family: base.$main-font;
   font-weight: 300;
+  background-color: base.$vib-cyan;
 }
 
 .logo-partner {
