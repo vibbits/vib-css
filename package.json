@@ -1,0 +1,24 @@
+{
+  "name": "vib-css",
+  "version": "1.0.0",
+  "description": "VIB CSS",
+  "scripts": {
+    "build": "sass scss:output && postcss output/vib.css > output/vib.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vibbits/vib-css.git"
+  },
+  "author": "VIB Bioinformatics Core Facility",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vibbits/vib-css/issues"
+  },
+  "homepage": "https://github.com/vibbits/vib-css#readme",
+  "devDependencies": {
+    "cssnano": "^5.1.7",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.51.0"
+  }
+}

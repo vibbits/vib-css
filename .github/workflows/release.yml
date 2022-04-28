@@ -1,0 +1,36 @@
+on:
+  workflow_dispatch:
+
+name: Release Workflow
+
+jobs:
+  build:
+    name: Release build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup NodeJs
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install PostCSS deps
+        run: |
+          npm i
+
+      - name: Compile CSS from SCSS files
+        run: npm run build
+
+      - name: Create release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref }}
+          name: Release ${{ github.ref }}
+          prerelease: false
+          draft: true
+          files: |
+            output/vib.css
+            output/vib.css.map
+            output/vib.min.css
