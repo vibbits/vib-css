@@ -1,0 +1,117 @@
+/**
+ * VIB CSS Styling.
+ * Copyright 2022 VIB Bioinformatics Core Facility.
+ * Permission is granted to use, change, and modify this
+ * code under the terms of the MIT license
+ * (see LICENSE, https://raw.githubusercontent.com/vibbits/vib-css/main/LICENSE)
+ */
+
+@use "base";
+
+.vib-h1 {
+  font-family: base.$vib-dense-font;
+  font-size: 72px;
+}
+
+.vib-h2 {
+  font-family: base.$vib-font;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.vib-h3 {
+  font-family: base.$vib-dense-bold-font;
+  font-size: 30px;
+}
+
+.vib-btn {
+  font-family: base.$vib-dense-font;
+  font-size: 1.875rem;
+  color: base.$vib-blue;
+  margin-left: 32px;
+  text-decoration: none;
+
+  &:hover {
+    color: base.$vib-cyan;
+    text-decoration: underline;
+  }
+}
+
+%chevron {
+  content: " ";
+  position: absolute;
+  width: 80px;
+  height: 20px;
+  top: 6px;
+  z-index: 2;
+  background: base.$vib-blue;
+}
+
+.vib-bar-breadcrumb {
+  height: 45px;
+
+  a.vib-main-site {
+    padding: 10px 11px 10px 16px;
+    overflow: hidden;
+    background: base.$vib-blue
+      url("https://github.com/vibbits/vib-css/raw/main/images/chev_divider.png")
+      no-repeat 100%;
+    transition: all 150ms ease;
+
+    &:hover {
+      background-color: base.$vib-cyan;
+    }
+
+    &::before {
+      @extend %chevron;
+      left: 46px;
+      transform: rotate(70deg);
+    }
+
+    &::after {
+      @extend %chevron;
+      left: 50px;
+      transform: rotate(-70deg);
+    }
+  }
+}
+
+.vib-logo-small {
+  height: 18px;
+}
+
+.vib-nav {
+  text-align: right;
+}
+
+.vib-main-footer {
+  width: 100%;
+  margin: 0 !important;
+}
+
+.footer-l {
+  padding: 65px 40px 65px 40px;
+  flex-grow: 2;
+}
+
+.footer-r {
+  padding: 65px 50px 65px 50px;
+  font-family: base.$main-font;
+  font-weight: 300;
+}
+
+.logo-partner {
+  height: 61px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.vlaanderen-footer {
+  padding: 10px 18px 10px 18px;
+  margin: 0 !important;
+  width: 100%;
+
+  > img {
+    width: 150px;
+  }
+}

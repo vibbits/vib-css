@@ -1,0 +1,89 @@
+/**
+ * VIB CSS Styling.
+ * Copyright 2022 VIB Bioinformatics Core Facility.
+ * Permission is granted to use, change, and modify this
+ * code under the terms of the MIT license
+ * (see LICENSE, https://raw.githubusercontent.com/vibbits/vib-css/main/LICENSE)
+ */
+
+// COLOURS
+$vib-blue: #1b2944;
+$vib-orange: #ff681e;
+$vib-cyan: #1cbbba;
+
+$off-white: rgb(244, 244, 244);
+$border-colour: rgba(128, 128, 128, 0.1);
+
+// FONTS
+@font-face {
+  font-family: Dense;
+  src: url("https://github.com/vibbits/vib-css/raw/main/fonts/Dense-Regular.otf");
+}
+
+@font-face {
+  font-family: Dense-Bold;
+  src: url("https://github.com/vibbits/vib-css/raw/main/fonts/Dense-Bold.otf");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap");
+
+$main-font: "Open Sans", sans-serif;
+$vib-font: "Barlow Condensed", sans-serif;
+$vib-dense-font: Dense, sans-serif;
+$vib-dense-bold-font: Dense-Bold, sans-serif;
+
+// RESET
+
+* {
+  margin: 0;
+}
+
+// GENERAL
+
+body {
+  background-color: $off-white;
+  width: 100%;
+  font-family: $main-font;
+}
+
+a {
+  color: $vib-blue;
+
+  &:hover {
+    color: $vib-orange;
+  }
+}
+
+table {
+  border: 1px solid $border-colour;
+  text-align: left;
+
+  thead {
+    color: gray;
+  }
+}
+
+th,
+td {
+  padding: 15px 0px 15px 25px;
+  border-bottom: 1px solid $border-colour;
+  font-size: 14px;
+}
+
+footer {
+  margin: 60px 0 0 0 !important;
+  font-weight: 400;
+  padding: 0 0 0 0;
+  width: 100%;
+}
+
+.banner {
+  min-height: 220px;
+  background: $vib-blue url("/banner.jpg") no-repeat 50% center;
+}
+
+.z2 {
+  z-index: 2;
+}
