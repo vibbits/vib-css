@@ -68,13 +68,13 @@
 
     &::before {
       @extend %chevron;
-      left: 46px;
+      left: 54px;
       transform: rotate(70deg);
     }
 
     &::after {
       @extend %chevron;
-      left: 50px;
+      left: 59px;
       transform: rotate(-70deg);
     }
   }
@@ -91,6 +91,7 @@
 
 .vib-logo-small {
   height: 18px;
+  margin-bottom: 7px;
 }
 
 .vib-nav {

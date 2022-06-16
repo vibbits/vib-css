@@ -12,7 +12,9 @@ $vib-orange: #ff681e;
 $vib-cyan: #1cbbba;
 
 $off-white: rgb(244, 244, 244);
+$off-black: rgba(0, 0, 0, 0.85);
 $border-colour: rgba(128, 128, 128, 0.1);
+$vib-shadow: rgba(0, 0, 0, 0.01);
 
 // FONTS
 @font-face {
@@ -46,6 +48,33 @@ body {
   background-color: $off-white;
   width: 100%;
   font-family: $main-font;
+  font-weight: 300;
+  font-size: 1rem;
+  text-rendering: optimizeLegibility;
+  text-shadow: $vib-shadow 0 0 1px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 4.375rem;
+    line-height: 4.375rem;
+    color: $vib-blue;
+    font-weight: 400;
+    font-family: $vib-font;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-weight: 400;
+    color: $off-black;
+    font-family: $vib-font;
+  }
 }
 
 nav {
