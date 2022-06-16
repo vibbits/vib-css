@@ -17,12 +17,12 @@ $border-colour: rgba(128, 128, 128, 0.1);
 // FONTS
 @font-face {
   font-family: Dense;
-  src: url("https://cdn.jsdelivr.net/gh/vibbits/vib-css@master/fonts/Dense-Regular.otf");
+  src: url("../fonts/Dense-Regular.otf") format("opentype");
 }
 
 @font-face {
   font-family: Dense-Bold;
-  src: url("https://cdn.jsdelivr.net/gh/vibbits/vib-css@master/fonts/Dense-Bold.otf");
+  src: url("../fonts/Dense-Bold.otf") format("opentype");
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&display=swap");

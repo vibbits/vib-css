@@ -54,9 +54,7 @@
   a.vib-main-site {
     padding: 10px 11px 10px 16px;
     overflow: hidden;
-    background: base.$vib-blue
-      url("https://github.com/vibbits/vib-css/raw/main/images/chev_divider.png")
-      no-repeat 100%;
+    background: base.$vib-blue url("../images/chev_divider.png") no-repeat 100%;
     transition: all 150ms ease;
 
     &:hover {
@@ -74,6 +72,9 @@
       left: 50px;
       transform: rotate(-70deg);
     }
+  }
+
+  .breadcrumb {
   }
 }
 
