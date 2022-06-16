@@ -50,6 +50,10 @@
 .vib-bar-breadcrumb {
   height: 45px;
   background-color: base.$vib-blue;
+  display: flex;
+  position: relative;
+  font-size: 12px;
+  font-weight: 600;
 
   a.vib-main-site {
     padding: 10px 11px 10px 16px;
@@ -74,7 +78,9 @@
     }
   }
 
-  .breadcrumb {
+  a.breadcrumb {
+    text-decoration: none;
+    font-family: base.$main-font;
   }
 }
 
