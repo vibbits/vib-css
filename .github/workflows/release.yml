@@ -37,3 +37,8 @@ jobs:
             output/vib.css
             output/vib.css.map
             output/vib.min.css
+
+      - name: Publish
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}

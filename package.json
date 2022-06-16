@@ -1,7 +1,8 @@
 {
-  "name": "vib-css",
-  "version": "1.0.0",
+  "name": "@vibbioinfocore/vib-css",
+  "version": "0.0.2",
   "description": "VIB CSS",
+  "main": "output/vib.min.css",
   "scripts": {
     "build": "sass scss:output && postcss output/vib.css > output/vib.min.css"
   },
