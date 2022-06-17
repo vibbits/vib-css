@@ -103,23 +103,55 @@
   text-align: right;
 }
 
-.vib-main-footer {
+footer.vib-main-footer {
   width: 100%;
-  margin: 0 !important;
-}
-
-.footer-l {
-  padding: 65px 40px 65px 40px;
-  flex-grow: 2;
-  background-color: base.$vib-blue;
-  color: white;
-}
-
-.footer-r {
-  padding: 65px 50px 65px 50px;
+  margin: 0 0 0 60px;
+  display: flex;
+  flex-direction: row;
   font-family: base.$main-font;
-  font-weight: 300;
-  background-color: base.$vib-cyan;
+
+  h3 {
+    font-family: base.$vib-dense-font;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 1.875rem;
+  }
+
+  .footer-l {
+    padding: 65px 40px 65px 40px;
+    flex-grow: 2;
+    background-color: base.$vib-blue;
+    color: white;
+    width: 168%;
+
+    .menu-box {
+      margin-bottom: 40px;
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .footer-r {
+    padding: 65px 50px 65px 50px;
+    font-family: base.$main-font;
+    font-weight: 300;
+    background-color: base.$vib-cyan;
+    color: base.$vib-blue;
+    width: 132%;
+  }
 }
 
 .logo-partner {
