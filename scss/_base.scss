@@ -60,22 +60,22 @@ main {
   align-items: center;
   justify-content: center;
   padding: 1rem;
+}
 
-  h1 {
-    font-size: 4.375rem;
-    line-height: 4.375rem;
-    color: $vib-blue;
-    font-weight: 400;
-    font-family: $vib-font;
-  }
+h1 {
+  font-size: 4.375rem;
+  line-height: 4.375rem;
+  color: $vib-blue;
+  font-weight: 400;
+  font-family: $vib-font;
+}
 
-  h2 {
-    font-size: 2.5rem;
-    line-height: 2.5rem;
-    font-weight: 400;
-    color: $off-black;
-    font-family: $vib-font;
-  }
+h2 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  color: $off-black;
+  font-family: $vib-font;
 }
 
 nav {
