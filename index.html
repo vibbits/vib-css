@@ -8,22 +8,233 @@
   <meta name="description" content=
   "Documentation for the CSS library used for VIB styling.">
   <link href=
-  "https://cdn.jsdelivr.net/npm/@vibbioinfocore/vib-css@0.0.6" rel=
+  "https://cdn.jsdelivr.net/npm/@vibbioinfocore/vib-css@0.0.7" rel=
   "stylesheet">
+  <link rel="stylesheet" href=
+  "https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css"
+  integrity=
+  "sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ=="
+  crossorigin="anonymous">
+  <style>
+    section {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        background-color: white;
+        box-shadow: 0 1px 4px rgb(0 21 41 / 12%);
+        width: 90%;
+        gap: 20px;
+    }
+
+    main {
+        gap: 25px;
+    }
+
+    .container {
+        width: 100%;
+        margin: 2rem;
+        display: flex;
+        gap: 50px;
+    }
+
+    .colour-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+    }
+
+    .font-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 40px;
+    }
+
+    .usage {
+        font-size: 1rem;
+        width: max-content;
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="vib-bar-breadcrumb">
-      <a class="vib-main-site" target="_blank" rel=
-      "noopener noreferer"><img class="vib-logo-small" src=
+      <a class="vib-main-site" href="https://vib.be" target=
+      "_blank" rel="noopener noreferer"><img class="vib-logo-small"
+      src=
       "https://cdn.jsdelivr.net/npm/@vibbioinfocore/vib-css/images/vib.svg"
       alt="VIB Logo"></a> <a class="breadcrumb" href=
       "/vib-css/">VIB CSS</a>
     </div>
+    <nav class="vib-nav">
+      <h1 class="vib-app-logo">CSS Styling Library</h1>
+      <ul class="vib-main-menu" role="menu">
+        <li>
+          <a href="#install">How to use</a>
+        </li>
+        <li>
+          <a href="#breadcrumb-bar">Breadcrumb Bar</a>
+        </li>
+        <li>
+          <a href="#nav">Navigation Bar</a>
+        </li>
+        <li>
+          <a href="#footer">Footer</a>
+        </li>
+        <li>
+          <a href="#colour">Colours</a>
+        </li>
+        <li>
+          <a href="#font">Fonts</a>
+        </li>
+      </ul>
+    </nav>
   </header>
   <main>
-    <h1>VIB CSS Styling Library</h1>
-    <h2>Bioinformatics Core Facility</h2>
+    <section id="install">
+      <h2>Install via npm</h2>
+      <pre><code class=
+      "language-shell">$ npm install vib-css@latest</code></pre>
+      <h2>Install via CDN</h2>
+      <pre><code class=
+      "language-html">&lt;link href="https://cdn.jsdelivr.net/npm/@vibbioinfocore/vib-css@latest" rel="stylesheet"&gt;</code></pre>
+    </section>
+    <section id="breadcrumb-bar">
+      <h2>Breadcrumb Bar</h2>
+      <p class="codepen" data-height="300" data-default-tab=
+      "html,result" data-slug-hash="rNJgOYO" data-user=
+      "maybejustjames" style=
+      "height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+      <span>See the Pen <a href=
+      "https://codepen.io/maybejustjames/pen/rNJgOYO">VIB-CSS
+      Breadcrumb demo</a> by James Collier (<a href=
+      "https://codepen.io/maybejustjames">@maybejustjames</a>) on
+      <a href="https://codepen.io">CodePen</a>.</span></p>
+      <script async src=
+      "https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+    </section>
+    <section id="nav">
+      <h2>Navigation Bar</h2>
+      <p class="codepen" data-height="300" data-default-tab=
+      "html,result" data-slug-hash="KKQLdrK" data-user=
+      "maybejustjames" style=
+      "height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+      <span>See the Pen <a href=
+      "https://codepen.io/maybejustjames/pen/KKQLdrK">VIB CSS
+      Navigation bar demo</a> by James Collier (<a href=
+      "https://codepen.io/maybejustjames">@maybejustjames</a>) on
+      <a href="https://codepen.io">CodePen</a>.</span></p>
+      <script async src=
+      "https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+    </section>
+    <section id="footer">
+      <h2>Footer</h2>
+      <p class="codepen" data-height="378" data-default-tab=
+      "html,result" data-slug-hash="XWZwmGN" data-user=
+      "maybejustjames" style=
+      "height: 378px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+      <span>See the Pen <a href=
+      "https://codepen.io/maybejustjames/pen/XWZwmGN">VIB-CSS
+      Footer demo</a> by James Collier (<a href=
+      "https://codepen.io/maybejustjames">@maybejustjames</a>) on
+      <a href="https://codepen.io">CodePen</a>.</span></p>
+      <script async src=
+      "https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+    </section>
+    <section id="colour">
+      <h2>Colours</h2>
+      <div class="container">
+        <div class="colour-container" style=
+        "background-color:#1cbbba;">
+          #1cbbba
+        </div>
+        <div class="colour-container" style=
+        "background-color:#1b2944;color:white;">
+          #1b2944
+        </div>
+        <div class="colour-container" style=
+        "background-color:#ff681e;">
+          #ff681e
+        </div>
+      </div>
+    </section>
+    <section id="font">
+      <h2>Fonts</h2>
+      <div class="container" style="flex-direction:column;">
+        <div class="font-container" style="font-family:Open Sans">
+          Regular font for main text content.
+          <div class="usage">
+            <pre><code class=
+            "language-css">p { font-family: "Open Sans"; }</code></pre>
+          </div>
+        </div>
+        <div class="font-container" style=
+        "font-family:Barlow Condensed">
+          Font for page and section headings.
+          <div class="usage">
+            <pre><code class=
+            "language-css">h1 { font-family: "Barlow Condensed"; }</code></pre>
+          </div>
+        </div>
+        <div class="font-container" style="font-family:Dense">
+          Dense font for links.
+          <div class="usage">
+            <pre><code class=
+            "language-css">a { font-family: "Dense"; }</code></pre>
+          </div>
+        </div>
+        <div class="font-container" style="font-family:Dense-Bold">
+          Dense bold font for highlighting and emphasis.
+          <div class="usage">
+            <pre><code class=
+            "language-css">a { font-family: "Dense-Bold"; }</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer class="vib-main-footer">
+    <div class="footer-l">
+      <div class="menu-box">
+        <h3>Examples</h3>
+        <ul>
+          <li>
+            <a href="https://acinetobase.vib.be">Acinetobase</a>
+          </li>
+          <li>
+            <a href="https://mec-shiny.vib.be/">Mec-Shiny</a>
+          </li>
+          <li>
+            <a href="https://gg2-assembler-test.vib.be">GG2
+            Assembler</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-r">
+      <h3>About</h3>
+      <div>
+        © <a href="https://bioinformaticscore.sites.vib.be">VIB
+        Bioinformatics Core</a> 2022
+      </div>
+      <div style="margin-top:2rem;">
+        This page is documentation for the VIB CSS Styling library.
+        This library is part of the developers toolkit put together
+        by the Bioinformatics Core Facility.
+      </div>
+    </div>
+  </footer>
+  <script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-core.min.js"
+  integrity=
+  "sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="
+  crossorigin="anonymous"></script> 
+  <script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js"
+  integrity=
+  "sha512-fTl/qcO1VgvKtOMApX2PdZzkziyr2stM65GYPLGuYMnuMm1z2JLJG6XVU7C/mR+E7xBUqCivykuhlzfqxXBXbg=="
+  crossorigin="anonymous"></script>
 </body>
 </html>
