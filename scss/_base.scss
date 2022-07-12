@@ -20,11 +20,13 @@ $vib-shadow: rgba(0, 0, 0, 0.01);
 @font-face {
   font-family: Dense;
   src: url("../fonts/Dense-Regular.otf") format("opentype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: Dense-Bold;
   src: url("../fonts/Dense-Bold.otf") format("opentype");
+  font-display: swap;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&display=swap");
