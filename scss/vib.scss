@@ -8,6 +8,42 @@
 
 @use "base";
 
+.background-off-white {
+  background-color: base.$off-white;
+}
+
+.background-off-black {
+  background-color: base.$off-black;
+}
+
+.background-blue {
+  background-color: base.$vib-blue;
+}
+
+.background-cyan {
+  background-color: base.$vib-cyan;
+}
+
+.background-orange {
+  background-color: base.$vib-orange;
+}
+
+.border-grey {
+  border-color: base.$border-color;
+}
+
+.foreground-blue {
+  color: base.$vib-blue;
+}
+
+.foreground-cyan {
+  color: base.$vib-cyan;
+}
+
+.foreground-orange {
+  color: base.$vib-orange;
+}
+
 .vib-h1 {
   font-family: base.$vib-dense-font;
   font-size: 72px;
