@@ -1,0 +1,37 @@
+@use "base";
+
+@mixin background-off-white {
+  background-color: base.$off-white;
+}
+
+@mixin background-off-black {
+  background-color: base.$off-black;
+}
+
+@mixin background-blue {
+  background-color: base.$vib-blue;
+}
+
+@mixin background-cyan {
+  background-color: base.$vib-cyan;
+}
+
+@mixin background-orange {
+  background-color: base.$vib-orange;
+}
+
+@mixin border-grey {
+  border-color: base.$border-colour;
+}
+
+@mixin foreground-blue {
+  color: base.$vib-blue;
+}
+
+@mixin foreground-cyan {
+  color: base.$vib-cyan;
+}
+
+@mixin foreground-orange {
+  color: base.$vib-orange;
+}

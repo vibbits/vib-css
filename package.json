@@ -1,10 +1,10 @@
 {
   "name": "@vibbioinfocore/vib-css",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "VIB CSS",
   "main": "output/vib.min.css",
   "scripts": {
-    "build": "sass scss:output && postcss output/vib.css > output/vib.min.css"
+    "build": "sass scss/vib.scss:output/vib.css && postcss output/vib.css > output/vib.min.css"
   },
   "repository": {
     "type": "git",
