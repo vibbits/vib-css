@@ -8,7 +8,7 @@
     "build-dev": "sass scss:doc",
     "watch-scss": "chokidar \"scss/**/*.scss\" -c \"npm run build-dev\"",
     "watch-server": "live-server --no-browser ./doc",
-    "watch": "concurrently \"npm:watch-scss\" \"npm:watch-server\""
+    "start": "concurrently \"npm:watch-scss\" \"npm:watch-server\""
   },
   "repository": {
     "type": "git",
