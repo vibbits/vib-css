@@ -5,10 +5,11 @@
   "main": "output/vib.min.css",
   "scripts": {
     "build": "sass scss/vib.scss:output/vib.css && postcss output/vib.css > output/vib.min.css",
-    "build-dev": "sass scss:doc",
+    "build-doc": "mkdir -p doc/images doc/fonts && cp -R images/ doc/images && cp -R fonts/ doc/fonts && npm run build-dev",
+    "build-dev": "sass scss/vib.scss:doc/vib.css",
     "watch-scss": "chokidar \"scss/**/*.scss\" -c \"npm run build-dev\"",
     "watch-server": "live-server --no-browser ./doc",
-    "start": "concurrently \"npm:watch-scss\" \"npm:watch-server\""
+    "start": "npm run build-dev && concurrently \"npm:watch-scss\" \"npm:watch-server\""
   },
   "repository": {
     "type": "git",
