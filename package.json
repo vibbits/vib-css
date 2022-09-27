@@ -5,7 +5,7 @@
   "main": "output/vib.min.css",
   "scripts": {
     "build": "sass scss/vib.scss:output/vib.css && postcss output/vib.css > output/vib.min.css",
-    "build-doc": "mkdir -p docs/images docs/fonts && cp -R images/ docs/images && cp -R fonts/ docs/fonts && npm run build-dev",
+    "build-doc": "mkdir -p docs/images docs/fonts && cp -R images/* docs/images && cp -R fonts/* docs/fonts && npm run build-dev",
     "build-dev": "sass scss/vib.scss:docs/vib.css",
     "watch-scss": "chokidar \"scss/**/*.scss\" -c \"npm run build-dev\"",
     "watch-server": "live-server --no-browser --mount=/vib-css/:./docs",
