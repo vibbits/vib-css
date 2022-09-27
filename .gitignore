@@ -2,8 +2,3 @@
 .node-version
 node_modules/
 output/
-
-doc/fonts
-doc/images
-doc/vib.css
-doc/vib.css.map
