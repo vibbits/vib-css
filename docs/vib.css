@@ -9,12 +9,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap");
 @font-face {
   font-family: Dense;
-  src: url("../fonts/Dense-Regular.otf") format("opentype");
+  src: url("https://cdn.jsdelivr.net/npm/@vibbioinfocore/vib-css/fonts/Dense-Regular.otf") format("opentype");
   font-display: swap;
 }
 @font-face {
   font-family: Dense-Bold;
-  src: url("../fonts/Dense-Bold.otf") format("opentype");
+  src: url("https://cdn.jsdelivr.net/npm/@vibbioinfocore/vib-css/fonts/Dense-Bold.otf") format("opentype");
   font-display: swap;
 }
 /**
