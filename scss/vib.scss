@@ -167,7 +167,9 @@ main.vib-main {
   a.vib-main-site {
     padding: 10px 16px 10px 20px;
     overflow: hidden;
-    background: base.$vib-blue url("../images/chev_divider.png") no-repeat 100%;
+    background: base.$vib-blue
+      url("https://cdn.jsdelivr.net/npm/@vibbioinfocore/vib-css/images/chev_divider.png")
+      no-repeat 100%;
     position: relative;
 
     @include base.laptop {
