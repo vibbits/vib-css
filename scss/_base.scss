@@ -16,6 +16,29 @@ $off-black: rgba(0, 0, 0, 0.85);
 $border-colour: rgba(128, 128, 128, 0.1);
 $vib-shadow: rgba(0, 0, 0, 0.01);
 
+// BREAKPOINTS
+$breakpoint-tablet: 672px;
+$breakpoint-laptop: 990px;
+$breakpoint-large-screen: 1296px;
+
+@mixin tablet {
+  @media only screen and (min-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media only screen and (min-width: #{$breakpoint-laptop}) {
+    @content;
+  }
+}
+
+@mixin large-screen {
+  @media only screen and (min-width: #{$breakpoint-large-screen}) {
+    @content;
+  }
+}
+
 // FONTS
 @font-face {
   font-family: Dense;

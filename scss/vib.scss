@@ -17,7 +17,7 @@
 
 // GENERAL
 
-body {
+body.vib-body {
   background-color: base.$off-white;
   width: 100%;
   font-family: base.$main-font;
@@ -25,65 +25,59 @@ body {
   font-size: 1rem;
   text-rendering: optimizeLegibility;
   text-shadow: base.$vib-shadow 0 0 1px;
+
+  a {
+    color: base.$vib-blue;
+
+    &:hover {
+      color: base.$vib-orange;
+    }
+  }
+
+  h1 {
+    font-size: 4.375rem;
+    line-height: 4.375rem;
+    color: base.$vib-blue;
+    font-weight: 400;
+    font-family: base.$vib-font;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-weight: 400;
+    color: base.$off-black;
+    font-family: base.$vib-font;
+  }
 }
 
-main {
+main.vib-main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 1rem;
-}
+  gap: 2rem;
 
-h1 {
-  font-size: 4.375rem;
-  line-height: 4.375rem;
-  color: base.$vib-blue;
-  font-weight: 400;
-  font-family: base.$vib-font;
-}
-
-h2 {
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-  font-weight: 400;
-  color: base.$off-black;
-  font-family: base.$vib-font;
-}
-
-nav {
-  background-color: base.$off-white;
-}
-
-a {
-  color: base.$vib-blue;
-
-  &:hover {
-    color: base.$vib-orange;
+  section {
+    width: 100%;
   }
-}
 
-table {
-  border: 1px solid base.$border-colour;
-  text-align: left;
+  table {
+    border: 1px solid base.$border-colour;
+    text-align: left;
 
-  thead {
-    color: gray;
+    thead {
+      color: gray;
+    }
   }
-}
 
-th,
-td {
-  padding: 15px 0px 15px 25px;
-  border-bottom: 1px solid base.$border-colour;
-  font-size: 14px;
-}
-
-footer {
-  margin: 60px 0 0 0 !important;
-  font-weight: 400;
-  padding: 0 0 0 0;
-  width: 100%;
+  th,
+  td {
+    padding: 15px 0px 15px 25px;
+    border-bottom: 1px solid base.$border-colour;
+    font-size: 14px;
+  }
 }
 
 .background-off-white {
@@ -168,16 +162,19 @@ footer {
   align-items: center;
   font-size: 12px;
   font-weight: 600;
+  overflow-x: auto;
 
   a.vib-main-site {
     padding: 10px 16px 10px 20px;
     overflow: hidden;
     background: base.$vib-blue url("../images/chev_divider.png") no-repeat 100%;
-    transition: all 150ms ease;
     position: relative;
 
-    &:hover {
-      background-color: base.$vib-cyan;
+    @include base.laptop {
+      transition: all 150ms ease;
+      &:hover {
+        background-color: base.$vib-cyan;
+      }
     }
 
     &::before {
@@ -203,6 +200,7 @@ footer {
 
     &:hover {
       text-decoration: underline;
+      color: white;
     }
   }
 }
@@ -213,46 +211,131 @@ footer {
   margin-bottom: 3px;
 }
 
-.vib-nav {
+header.vib-header {
   display: flex;
-  justify-content: space-between;
-  background-color: white;
+  flex-direction: column;
+  justify-content: center;
   box-shadow: 0 1px 4px rgb(0 21 41 / 12%);
-  padding: 0.7rem;
+  background-color: white;
 
-  .vib-app-logo {
-  }
-
-  ul.vib-main-menu {
-    justify-content: flex-end;
-    gap: 30px;
-    align-items: center;
-    width: 100%;
+  nav.vib-nav {
     display: flex;
-    list-style: none;
-    padding-left: 0;
+    flex-direction: column;
+    gap: 3rem;
+    @include base.laptop {
+      flex-direction: row;
+    }
+    align-self: center;
+    background-color: white;
+    padding: 0.7rem 0rem 0.7rem 0rem;
+    width: 90%;
 
-    a {
-      font-size: 30px;
-      line-height: 1;
-      font-family: base.$vib-dense-font;
-      font-weight: 500;
-      color: base.$vib-blue;
-      text-decoration: none;
+    input[type="checkbox"]#vib-toggle-menu {
+      display: none;
+    }
 
-      &:hover {
-        text-decoration: underline;
+    input[type="checkbox"]#vib-toggle-menu:checked ~ .vib-main-menu {
+      display: flex;
+      flex-direction: column;
+
+      @include base.laptop {
+        flex-direction: row;
+      }
+    }
+
+    .vib-menu-toggle-button {
+      display: inline-block;
+      padding: 7px 10px;
+      position: absolute;
+      right: 10px;
+
+      @include base.laptop {
+        display: none;
+      }
+    }
+
+    .vib-menu-button-bar {
+      display: block;
+      @include background-blue;
+      width: 30px;
+      height: 3px;
+      border-radius: 5px;
+      margin: 5px auto;
+      transition: transform 0.2s ease-in;
+    }
+
+    ul.vib-main-menu {
+      justify-content: flex-end;
+      gap: 30px;
+      align-items: center;
+      width: 100%;
+      display: none;
+      @include base.laptop {
+        display: flex;
+        flex-direction: row;
+      }
+      flex-direction: column;
+      list-style: none;
+      padding-left: 0;
+
+      a {
+        font-size: 30px;
+        line-height: 1;
+        font-family: base.$vib-dense-font;
+        font-weight: 500;
+        color: base.$vib-blue;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
 }
 
+div.container {
+  // a generic responsive container
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+  gap: 50px;
+
+  @include base.tablet {
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+div.column-container {
+  display: grid;
+  grid-auto-flow: row;
+  place-items: center;
+  place-content: center;
+  margin: 0.5rem;
+  gap: 0.5rem;
+
+  & > * {
+    overflow: scroll !important;
+    max-width: 100%;
+  }
+}
+
 footer.vib-main-footer {
   width: 100%;
-  margin: 0 0 0 60px;
+  margin: 60px 0 0 0 !important;
+  font-weight: 400;
+  padding: 0 0 0 0;
   display: flex;
-  flex-direction: row;
   font-family: base.$main-font;
+  flex-direction: column;
+
+  @include base.laptop {
+    flex-direction: row;
+  }
 
   h3 {
     font-family: base.$vib-dense-font;
@@ -267,7 +350,10 @@ footer.vib-main-footer {
     flex-grow: 2;
     background-color: base.$vib-blue;
     color: white;
-    width: 168%;
+
+    @include base.laptop {
+      width: 168%;
+    }
 
     .menu-box {
       margin-bottom: 40px;
@@ -294,7 +380,10 @@ footer.vib-main-footer {
     font-weight: 300;
     background-color: base.$vib-cyan;
     color: base.$vib-blue;
-    width: 132%;
+
+    @include base.laptop {
+      width: 132%;
+    }
   }
 }
 

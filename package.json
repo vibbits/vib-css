@@ -4,7 +4,12 @@
   "description": "VIB CSS",
   "main": "output/vib.min.css",
   "scripts": {
-    "build": "sass scss/vib.scss:output/vib.css && postcss output/vib.css > output/vib.min.css"
+    "build": "sass scss/vib.scss:output/vib.css && postcss output/vib.css > output/vib.min.css",
+    "build-doc": "mkdir -p doc/images doc/fonts && cp -R images/ doc/images && cp -R fonts/ doc/fonts && npm run build-dev",
+    "build-dev": "sass scss/vib.scss:doc/vib.css",
+    "watch-scss": "chokidar \"scss/**/*.scss\" -c \"npm run build-dev\"",
+    "watch-server": "live-server --no-browser ./doc",
+    "start": "npm run build-dev && concurrently \"npm:watch-scss\" \"npm:watch-server\""
   },
   "repository": {
     "type": "git",
@@ -17,13 +22,13 @@
   },
   "homepage": "https://github.com/vibbits/vib-css#readme",
   "devDependencies": {
-    "chokidar-cli": "^3.0.0",
-    "concurrently": "^7.4.0",
-    "cssnano": "^5.1.13",
-    "live-server": "^1.1.0",
-    "postcss": "^8.4.16",
-    "postcss-cli": "^10.0.0",
-    "postcss-url": "^10.1.3",
-    "sass": "^1.55.0"
+    "chokidar-cli": "3.0.0",
+    "concurrently": "7.4.0",
+    "cssnano": "5.1.13",
+    "live-server": "1.1.0",
+    "postcss": "8.4.16",
+    "postcss-cli": "10.0.0",
+    "postcss-url": "10.1.3",
+    "sass": "1.55.0"
   }
 }
