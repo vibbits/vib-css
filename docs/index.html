@@ -8,11 +8,7 @@
   <meta name="description" content=
   "Documentation for the CSS library used for VIB styling.">
   <link href="/vib-css/vib.css" rel="stylesheet">
-  <link rel="stylesheet" href=
-  "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
-  integrity=
-  "sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ=="
-  crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous">
   <style>
       .colour-container {
           display: flex;
@@ -30,15 +26,19 @@
 <body class="vib-body">
   <header class="vib-header">
     <div class="vib-bar-breadcrumb">
-      <a class="vib-main-site" href="https://vib.be" target=
-      "_blank" rel="noopener noreferer"><img class="vib-logo-small"
-      src="/vib-css/images/vib.svg" alt="VIB Logo"></a> <a class=
-      "breadcrumb" href="/vib-css/">VIB CSS</a>
+      <a class="vib-main-site" href="https://vib.be" target="_blank" rel="noopener noreferer"><img class="vib-logo-small" src="/vib-css/images/vib.svg" alt="VIB Logo"></a>
+      <a class="breadcrumb" href="/vib-css/">VIB CSS</a>
     </div>
     <nav class="vib-nav">
-      <h1 class="vib-app-logo">CSS Styling Library</h1><input type=
-      "checkbox" id="vib-toggle-menu"> <label class=
-      "vib-menu-toggle-button" for="vib-toggle-menu"></label>
+      <h1 class="vib-app-logo">CSS Styling Library</h1>
+
+      <input type="checkbox" id="vib-toggle-menu">
+      <label class="vib-menu-toggle-button" for="vib-toggle-menu">
+        <span class="vib-menu-button-bar vib-menu-top"></span>
+        <span class="vib-menu-button-bar vib-menu-middle"></span>
+        <span class="vib-menu-button-bar vib-menu-bottom"></span>
+      </label>
+
       <ul class="vib-main-menu" role="menu">
         <li>
           <a href="#install">How to use</a>
@@ -64,11 +64,9 @@
   <main class="vib-main">
     <section id="install">
       <h2>Install via npm</h2>
-      <pre><code class=
-      "language-shell">$ npm install vib-css@latest</code></pre>
+      <pre><code class="language-shell">$ npm install vib-css@latest</code></pre>
       <h2>Install via CDN</h2>
-      <pre><code class=
-      "language-html">&lt;link href="https://cdn.jsdelivr.net/npm/@vibbioinfocore/vib-css@latest" rel="stylesheet"&gt;</code></pre>
+      <pre><code class="language-html">&lt;link href="https://cdn.jsdelivr.net/npm/@vibbioinfocore/vib-css@latest" rel="stylesheet"&gt;</code></pre>
     </section>
     <section id="breadcrumb-bar">
       <h2>Breadcrumb Bar</h2>
@@ -76,8 +74,7 @@
       "html,result" data-slug-hash="rNJgOYO" data-user=
       "maybejustjames" style=
       "height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-      <span>See the Pen <a href=
-      "https://codepen.io/maybejustjames/pen/rNJgOYO">VIB-CSS
+      <span>See the Pen <a href="https://codepen.io/maybejustjames/pen/rNJgOYO">VIB-CSS
       Breadcrumb demo</a> by James Collier (<a href=
       "https://codepen.io/maybejustjames">@maybejustjames</a>) on
       <a href="https://codepen.io">CodePen</a>.</span></p>
@@ -127,10 +124,7 @@
         "background-color:#ff681e;">
           #ff681e
         </div>
-        <div class="colour-container" style=
-        "background-color:#5c2a83">
-          #5c2a83
-        </div>
+        <div class="colour-container" style="background-color:#5c2a83">#5c2a83</div>
       </div>
     </section>
     <section id="font">

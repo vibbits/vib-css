@@ -290,6 +290,7 @@ header.vib-header nav.vib-nav ul.vib-main-menu a:hover {
 header.vib-header nav.vib-nav .vib-app-logo {
   max-width: 80%;
   max-height: 140px;
+  object-fit: contain;
 }
 
 div.container {
