@@ -297,6 +297,7 @@ header.vib-header {
     .vib-app-logo {
       max-width: 80%;
       max-height: 140px;
+      object-fit: contain;
     }
   }
 }
