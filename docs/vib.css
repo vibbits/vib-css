@@ -163,6 +163,7 @@ main.vib-main td {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   font-weight: 600;
   overflow-x: auto;
