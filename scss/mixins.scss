@@ -35,3 +35,7 @@
 @mixin foreground-orange {
   color: base.$vib-orange;
 }
+
+@mixin align-end {
+  align-self: flex-end;
+}
